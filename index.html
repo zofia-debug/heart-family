@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Our Family ❤️</title>
+  <title>Family ❤️</title>
 
   <style>
     body {
@@ -16,53 +16,81 @@
       flex-direction: column;
     }
 
-    h1 {
-      color: #d63384;
-      font-size: 28px;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .room {
-      width: 320px;
-      height: 220px;
+    /* 🏡 房子 */
+    .house {
+      width: 360px;
+      height: 260px;
       background: #fff8f9;
       border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
       position: relative;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+      overflow: hidden;
+    }
+
+    /* 屋顶 */
+    .roof {
+      position: absolute;
+      top: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 200px solid transparent;
+      border-right: 200px solid transparent;
+      border-bottom: 80px solid #ff8fab;
+    }
+
+    /* 地板 */
+    .floor {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 40px;
+      background: #f3d1dc;
+    }
+
+    /* 窗户 */
+    .window {
+      position: absolute;
+      top: 60px;
+      width: 60px;
+      height: 60px;
+      background: #dff6ff;
+      border-radius: 10px;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .window.left { left: 40px; }
+    .window.right { right: 40px; }
+
+    /* 人物 */
+    .family {
+      position: absolute;
+      bottom: 45px;
+      width: 100%;
       display: flex;
       justify-content: space-around;
       align-items: flex-end;
-      padding-bottom: 20px;
     }
 
     .person {
-      font-size: 55px;
-      animation: smile 2s infinite alternate;
+      font-size: 50px;
       text-align: center;
-    }
-
-    @keyframes smile {
-      from { transform: translateY(0); }
-      to { transform: translateY(-8px); }
+      animation: bounce 2s infinite alternate;
     }
 
     .label {
       font-size: 12px;
       color: #555;
-      margin-top: 5px;
+      margin-top: 4px;
     }
 
-    .floor {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 30px;
-      background: #f3d1dc;
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-10px); }
     }
 
+    /* 祝福文字 */
     .love {
       margin-top: 20px;
       font-size: 18px;
@@ -70,35 +98,41 @@
       text-align: center;
       font-weight: bold;
     }
+
   </style>
 </head>
 
 <body>
 
-<h1>🏠 一家人在房间里的幸福时刻</h1>
+<div class="house">
+  <div class="roof"></div>
 
-<div class="room">
+  <div class="window left"></div>
+  <div class="window right"></div>
+
+  <div class="family">
+    <div class="person">
+      👨
+      <div class="label">爸爸</div>
+    </div>
+
+    <div class="person">
+      👩
+      <div class="label">妈妈</div>
+    </div>
+
+    <div class="person">
+      👦
+      <div class="label">哥哥</div>
+    </div>
+
+    <div class="person">
+      👧
+      <div class="label">妹妹</div>
+    </div>
+  </div>
+
   <div class="floor"></div>
-
-  <div class="person">
-    👨
-    <div class="label">爸爸</div>
-  </div>
-
-  <div class="person">
-    👩
-    <div class="label">妈妈</div>
-  </div>
-
-  <div class="person">
-    👦
-    <div class="label">哥哥</div>
-  </div>
-
-  <div class="person">
-    👧
-    <div class="label">妹妹</div>
-  </div>
 </div>
 
 <div class="love">
