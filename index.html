@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Our Family ❤️</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ffe4ec, #ffd1dc);
+      font-family: Arial;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    h1 {
+      color: #d63384;
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .room {
+      width: 320px;
+      height: 220px;
+      background: #fff8f9;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      position: relative;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      padding-bottom: 20px;
+    }
+
+    .person {
+      font-size: 55px;
+      animation: smile 2s infinite alternate;
+      text-align: center;
+    }
+
+    @keyframes smile {
+      from { transform: translateY(0); }
+      to { transform: translateY(-8px); }
+    }
+
+    .label {
+      font-size: 12px;
+      color: #555;
+      margin-top: 5px;
+    }
+
+    .floor {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 30px;
+      background: #f3d1dc;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    .love {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #c2185b;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>🏠 一家人在房间里的幸福时刻</h1>
+
+<div class="room">
+  <div class="floor"></div>
+
+  <div class="person">
+    👨
+    <div class="label">爸爸</div>
+  </div>
+
+  <div class="person">
+    👩
+    <div class="label">妈妈</div>
+  </div>
+
+  <div class="person">
+    👦
+    <div class="label">哥哥</div>
+  </div>
+
+  <div class="person">
+    👧
+    <div class="label">妹妹</div>
+  </div>
+</div>
+
+<div class="love">
+  爸爸妈妈哥哥我爱你们 ❤️<br>
+  祝健康快乐 🌸
+</div>
+
+</body>
+</html>
